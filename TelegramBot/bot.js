@@ -1,8 +1,9 @@
 const { Telegraf } = require('telegraf');
 const fs = require('fs');
 const path = require('path');
+require('dotenv').config();
 
-const bot = new Telegraf('7580122382:AAGMFvNOMxhgwKByRUG9vssIl7Llql9_gjQ');
+const bot = new Telegraf(process.env.KEY);
 
 // خواندن اطلاعات از فایل‌های JSON
 const highestStudy = JSON.parse(
