@@ -1,0 +1,248 @@
+{
+  "weeklyHours": {
+    "Teacher": {
+      "weekStudies": [6056],
+      "rates": []
+    },
+    "Mina-M": {
+      "weekStudies": [5513, 5574],
+      "rates": [61]
+    },
+    "Ram": {
+      "weekStudies": [6280, 5427],
+      "rates": [-853]
+    },
+    "Kim": {
+      "weekStudies": [3139, 5302, 5259],
+      "rates": [2163, -43]
+    },
+    "Mahsa": {
+      "weekStudies": [3603, 4303, 4572, 5154, 5402, 5187],
+      "rates": [700, 269, 582, 248, -215]
+    },
+    "Honey.": {
+      "weekStudies": [4674, 4718, 4916, 4239, 5159],
+      "rates": [44, 198, -677, 920]
+    },
+    "The Reza": {
+      "weekStudies": [2936, 5129],
+      "rates": [2193]
+    },
+    "fatemeh": {
+      "weekStudies": [4680, 3060, 3810, 4050],
+      "rates": [-1620, 750, 240]
+    },
+    "roya": {
+      "weekStudies": [3682, 3096, 3334, 3874],
+      "rates": [-586, 238, 540]
+    },
+    "You can do it": {
+      "weekStudies": [3833],
+      "rates": []
+    },
+    "GOD": {
+      "weekStudies": [3638],
+      "rates": []
+    },
+    "zephyr": {
+      "weekStudies": [3607, 3483, 3755, 3480, 3711, 3517],
+      "rates": [-124, 272, -275, 231, -194]
+    },
+    "Meli": {
+      "weekStudies": [3231, 3410, 3291, 3395],
+      "rates": [179, -119, 104]
+    },
+    "ela": {
+      "weekStudies": [3337],
+      "rates": []
+    },
+    "yasif": {
+      "weekStudies": [3329],
+      "rates": []
+    },
+    "bulut": {
+      "weekStudies": [5453, 3124],
+      "rates": [-2329]
+    },
+    "maryam": {
+      "weekStudies": [3261, 625, 4161, 4025, 4263, 3103],
+      "rates": [-2636, 3536, -136, 238, -1160]
+    },
+    "Paniz": {
+      "weekStudies": [3203, 3464, 3594, 3216, 3018],
+      "rates": [261, 130, -378, -198]
+    },
+    "Tiyara": {
+      "weekStudies": [3001],
+      "rates": []
+    },
+    "zari": {
+      "weekStudies": [2857],
+      "rates": []
+    },
+    "jasmine": {
+      "weekStudies": [2769, 2794, 2263, 2837],
+      "rates": [25, -531, 574]
+    },
+    "Tahereh": {
+      "weekStudies": [557, 3640, 2698, 2452, 2829],
+      "rates": [3083, -942, -246, 377]
+    },
+    "sosan": {
+      "weekStudies": [2558, 2400, 2640],
+      "rates": [-158, 240]
+    },
+    "mozhq": {
+      "weekStudies": [3351, 3300, 2575],
+      "rates": [-51, -725]
+    },
+    "setareh": {
+      "weekStudies": [2527],
+      "rates": []
+    },
+    "Rawan": {
+      "weekStudies": [2520],
+      "rates": []
+    },
+    "زهرا": {
+      "weekStudies": [1841, 1248, 1476, 2487],
+      "rates": [-593, 228, 1011]
+    },
+    "abol": {
+      "weekStudies": [2601, 4211, 3038, 1764, 2376],
+      "rates": [1610, -1173, -1274, 612]
+    },
+    "sabamarv": {
+      "weekStudies": [510, 3228, 3154, 2286],
+      "rates": [2718, -74, -868]
+    },
+    "Yalda": {
+      "weekStudies": [2675, 2015, 1983, 1918, 2248],
+      "rates": [-660, -32, -65, 330]
+    },
+    "Yashar": {
+      "weekStudies": [2078, 1655, 2101],
+      "rates": [-423, 446]
+    },
+    "<Majid/>": {
+      "weekStudies": [1402, 2023],
+      "rates": [621]
+    },
+    "Sahar": {
+      "weekStudies": [1969],
+      "rates": []
+    },
+    "Mahyar": {
+      "weekStudies": [2025, 2223, 2433, 2827, 2287, 1753],
+      "rates": [198, 210, 394, -540, -534]
+    },
+    "Ghazal": {
+      "weekStudies": [1724],
+      "rates": []
+    },
+    "light sky": {
+      "weekStudies": [1723],
+      "rates": []
+    },
+    "sanaz": {
+      "weekStudies": [1039, 2060, 1933, 1722],
+      "rates": [1021, -127, -211]
+    },
+    "sarahxhs7": {
+      "weekStudies": [1290, 1083, 1397, 1699],
+      "rates": [-207, 314, 302]
+    },
+    "FLY BOY": {
+      "weekStudies": [3025, 1199, 2038, 1791, 1690],
+      "rates": [-1826, 839, -247, -101]
+    },
+    "👩‍⚖️": {
+      "weekStudies": [1680],
+      "rates": []
+    },
+    "Norman": {
+      "weekStudies": [1920, 1969, 1988, 1634, 1015, 1582],
+      "rates": [49, 19, -354, -619, 567]
+    },
+    "jasmeetsingh.work": {
+      "weekStudies": [1498],
+      "rates": []
+    },
+    "mansooreh": {
+      "weekStudies": [937, 1489],
+      "rates": [552]
+    },
+    "parisaa": {
+      "weekStudies": [1523, 988, 1341],
+      "rates": [-535, 353]
+    },
+    "Masoum": {
+      "weekStudies": [2541, 1113, 2198, 791, 1215],
+      "rates": [-1428, 1085, -1407, 424]
+    },
+    "Maryam...": {
+      "weekStudies": [1470, 829, 2293, 2010, 1190],
+      "rates": [-641, 1464, -283, -820]
+    },
+    "mehrsa": {
+      "weekStudies": [1170],
+      "rates": []
+    },
+    "Bahar": {
+      "weekStudies": [919, 1048],
+      "rates": [129]
+    },
+    "FaFa": {
+      "weekStudies": [627, 2668, 1027],
+      "rates": [2041, -1641]
+    },
+    "Asmae": {
+      "weekStudies": [1921, 872, 740, 953],
+      "rates": [-1049, -132, 213]
+    },
+    "FATEMAH": {
+      "weekStudies": [934],
+      "rates": []
+    },
+    "saturn": {
+      "weekStudies": [904],
+      "rates": []
+    },
+    "hrezaak": {
+      "weekStudies": [823],
+      "rates": []
+    },
+    "Cyrus the great": {
+      "weekStudies": [1572, 2822, 1593, 786],
+      "rates": [1250, -1229, -807]
+    },
+    "sonya": {
+      "weekStudies": [688, 775],
+      "rates": [87]
+    },
+    "Ghazal-G": {
+      "weekStudies": [759],
+      "rates": []
+    },
+    "nastaran.78za": {
+      "weekStudies": [1156, 740],
+      "rates": [-416]
+    },
+    "قبول میشم": {
+      "weekStudies": [678],
+      "rates": []
+    },
+    "Arma": {
+      "weekStudies": [937, 1381, 611],
+      "rates": [444, -770]
+    },
+    "Aayat": {
+      "weekStudies": [3933, 4509, 4124],
+      "rates": [576, -385]
+    },
+    "Mainak": {
+      "weekStudies": [3447, 3825, 4041],
+      "rates": [378, 216]
+    }
+  }
+}
