@@ -1,5 +1,12 @@
-const fs = require('fs');
-const path = require('path');
+// const fs = require('fs');
+// const path = require('path');
+
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const inputFilePath = path.join(__dirname, 'input.json');
 const outputFilePath = path.join(__dirname, 'highestStudy.json');
@@ -90,7 +97,7 @@ function updateHighestStudyTimes() {
     console.log('فایل highestStudy.json به‌روز شد.');
 
     if (updatedNames.length > 0) {
-      console.log('افرادی که رکوردشان تغییر کرد:');
+      console.log('Record Breakers:  Shining Brighter Every Day 👏 \n');
       updatedNames.forEach((name) => console.log(name));
     } else {
       console.log('هیچ رکورد جدیدی شناسایی نشد.');

@@ -1,4 +1,5 @@
-const fs = require('fs');
+// const fs = require('fs');
+import fs from 'fs';
 
 // فایل‌های ورودی و خروجی
 const inputFile = 'input.json';
@@ -76,6 +77,15 @@ inputData.forEach((entry) => {
   }
 });
 
+let sum = 0;
+inputData.forEach((entry) => {
+  sum += timeToMinutes(entry.today);
+});
+console.log(`
+  ☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️
+  \n total hours for a day: ${minutesToTime(sum)} \n
+  ☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️\n`);
+
 // محاسبه اختلاف دو مقدار آخر و دسته‌بندی بر اساس پیشرفت و پسرفت
 let progress = [];
 let regress = [];
@@ -108,7 +118,7 @@ regress.sort((a, b) => a.difference - b.difference);
 countRanking.sort((a, b) => b.count - a.count);
 
 // نمایش خروجی
-console.log('today:');
+console.log('📝Daily Study => +4h\n');
 if (todayRanking.length === 0) console.log('هیچ موردی یافت نشد.');
 todayRanking.forEach((entry, index) => {
   console.log(`${index + 1}. ${entry.name} (${minutesToTime(entry.today)})`);

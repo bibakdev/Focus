@@ -14,7 +14,7 @@ const filePath = path.join(__dirname, 'input.json');
 // فعال کردن CORS برای همه درخواست‌ها
 app.use(
   cors({
-    origin: 'http://localhost:5173', // آدرس فرانت‌اند شما
+    origin: 'http://localhost:5175', // آدرس فرانت‌اند شما
     methods: 'GET,POST',
     allowedHeaders: 'Content-Type'
   })

@@ -4,6 +4,8 @@ const path = require('path');
 require('dotenv').config();
 
 const bot = new Telegraf(process.env.KEY);
+const targetsPath = path.join(__dirname, 'targets.json');
+const quizQuestions = JSON.parse(fs.readFileSync('./quiz.json', 'utf8'));
 
 // خواندن اطلاعات از فایل‌های JSON
 const highestStudy = JSON.parse(
@@ -399,9 +401,9 @@ const isAdmin = (ctx) => ctx.from.id.toString() === ADMIN_ID;
 
 // افزودن فرد جدید با تایم مشخص
 bot.command('addtarget', (ctx) => {
-  if (!isAdmin(ctx)) {
-    return ctx.reply('⛔️ شما اجازه استفاده از این دستور را ندارید.');
-  }
+  // if (!isAdmin(ctx)) {
+  //   return ctx.reply('⛔️ شما اجازه استفاده از این دستور را ندارید.');
+  // }
 
   let targetsData = {};
   try {
@@ -436,13 +438,13 @@ bot.command('addtarget', (ctx) => {
 
 // نمایش لیست افراد و تایم‌ها
 bot.command('showtargets', (ctx) => {
-  if (!isAdmin(ctx)) {
-    return ctx.reply('⛔️ شما اجازه استفاده از این دستور را ندارید.');
-  }
+  // if (!isAdmin(ctx)) {
+  //   return ctx.reply('⛔️ شما اجازه استفاده از این دستور را ندارید.');
+  // }
 
   let targetsData = {};
   try {
-    targetsData = JSON.parse(fs.readFileSync('./targets.json', 'utf8')) || {};
+    targetsData = JSON.parse(fs.readFileSync(targetsPath, 'utf8')) || {};
   } catch (error) {
     console.error('❌ خطا در خواندن فایل targets.json:', error.message);
     targetsData = {};
@@ -453,7 +455,7 @@ bot.command('showtargets', (ctx) => {
     .join('\n');
 
   ctx.reply(
-    ` لیست افراد و زمان‌های هدف در چالش 🍌\n${
+    ` لیست افراد و زمان‌های هدف در چالش آینده 🍌\n${
       formattedTargets || '⛔️ هنوز اطلاعاتی ثبت نشده است.'
     }`
   );
@@ -521,9 +523,17 @@ bot.command('run', (ctx) => {
         const targetMinutes = timeToMinutes(target);
         const todayMinutes = timeToMinutes(userData.today);
 
-        const status = targetMinutes >= todayMinutes ? '🍌' : '✅';
-
+        const status = targetMinutes > todayMinutes ? '🍌' : '✅';
         results.push(`${name} (${target} => ${userData.today}) ${status}`);
+
+        // if (name === 'me') {
+        //   const status = targetMinutes > todayMinutes ? '🦥' : '✅';
+
+        //   results.push(`${name} (${target} => ${userData.today}) ${status}`);
+        // } else {
+        //   results.push(`${name} (${target} => ${userData.today}) ${status}`);
+        // }
+        console.log(name, target, userData.today, status);
       } else {
         results.push(`${name} (${target} => ❓ اطلاعات یافت نشد)`);
       }
@@ -533,7 +543,7 @@ bot.command('run', (ctx) => {
       ? results.join('\n')
       : '⛔️ اطلاعاتی برای نمایش وجود ندارد.';
 
-    ctx.reply(outputMessage);
+    ctx.reply(`نتیجه چالش موزی  🍌\n \n` + outputMessage);
   } catch (error) {
     ctx.reply('❌ خطایی رخ داد: ' + error.message);
   }
@@ -570,6 +580,120 @@ bot.command('removeall', (ctx) => {
 
   fs.writeFileSync('./targets.json', '{}', 'utf8');
   ctx.reply('✅ همه کاربران با موفقیت از فایل targets.json حذف شدند.');
+});
+
+//TODO old quiz (remove object from json file)
+// ------------------------------
+// ------------------------------
+
+// bot.command('quiz', async (ctx) => {
+//   if (quizQuestions.length === 0) {
+//     return ctx.reply('❌ سوالی در لیست باقی نمانده است.');
+//   }
+
+//   // انتخاب تصادفی یک سوال
+//   const randomIndex = Math.floor(Math.random() * quizQuestions.length);
+//   const randomQuestion = quizQuestions[randomIndex];
+
+//   // حذف سوال انتخاب شده از آرایه
+//   quizQuestions.splice(randomIndex, 1);
+
+//   // بازنویسی فایل JSON بدون سوال انتخاب شده
+//   fs.writeFileSync('./quiz.json', JSON.stringify(quizQuestions, null, 2));
+
+//   await ctx.sendPoll(randomQuestion.question, randomQuestion.options, {
+//     type: 'quiz',
+//     correct_option_id: randomQuestion.correctIndex,
+//     explanation: 'اگه دوست داشتی تحلیل خودتو برا دوستات بگو',
+//     is_anonymous: false, // نمایش نام شرکت‌کنندگان
+//     allows_multiple_answers: false // فقط یک پاسخ مجاز است
+//   });
+// });
+
+// bot.command('quiz', async (ctx) => {
+// بررسی اینکه فقط شما (مدیر) بتوانید این دستور را اجرا کنید
+// if (ctx.from.id.toString() !== ADMIN_ID) {
+//   return ctx.reply('⛔️ شما اجازه دسترسی به این دستور را ندارید.');
+// }
+
+//   if (quizQuestions.length === 0) {
+//     return ctx.reply('❌ سوالی در لیست باقی نمانده است.');
+//   }
+//   // انتخاب سوالی که همه گزینه‌های آن کمتر از 100 کاراکتر باشد
+//   let validQuestionIndex = quizQuestions.findIndex((question) =>
+//     question.options.every((option) => option.length <= 100)
+//   );
+
+//   if (validQuestionIndex === -1) {
+//     return ctx.reply('⛔️ سوالی با گزینه‌های کمتر از 100 کاراکتر یافت نشد.');
+//   }
+
+//   const randomQuestion = quizQuestions[validQuestionIndex];
+
+//   // حذف سوال انتخاب شده از آرایه
+//   quizQuestions.splice(validQuestionIndex, 1);
+
+//   // بازنویسی فایل JSON بدون سوال انتخاب شده
+//   fs.writeFileSync('./quiz.json', JSON.stringify(quizQuestions, null, 2));
+
+//   await ctx.sendPoll(randomQuestion.question, randomQuestion.options, {
+//     type: 'quiz',
+//     correct_option_id: randomQuestion.correctIndex,
+//     explanation: 'اگه دوست داشتی تحلیل خودتو برا دوستات بگو',
+//     is_anonymous: false,
+//     allows_multiple_answers: false
+//   });
+// });
+
+let quizIndex = 0;
+
+bot.command('quiz', async (ctx) => {
+  if (quizQuestions.length === 0) {
+    return ctx.reply('❌ سوالی در لیست وجود ندارد.');
+  }
+
+  let validQuestion = null;
+
+  // جستجوی سوال معتبر
+  while (quizIndex < quizQuestions.length) {
+    const currentQuestion = quizQuestions[quizIndex];
+
+    // بررسی طول سوال
+    if (currentQuestion.question.length > 255) {
+      quizIndex = (quizIndex + 1) % quizQuestions.length;
+      continue;
+    }
+
+    // بررسی طول گزینه‌ها
+    if (
+      Array.isArray(currentQuestion.options) &&
+      currentQuestion.options.every((option) => option.length <= 100)
+    ) {
+      // بررسی طول توضیحات
+      if (currentQuestion.explanation.length <= 200) {
+        validQuestion = currentQuestion;
+        break;
+      }
+    }
+
+    // رفتن به سوال بعدی در صورت نامعتبر بودن سوال فعلی
+    quizIndex = (quizIndex + 1) % quizQuestions.length;
+  }
+
+  if (!validQuestion) {
+    return ctx.reply('⛔️ سوالی با گزینه‌های معتبر یا توضیح مناسب یافت نشد.');
+  }
+
+  await ctx.sendPoll(validQuestion.question, validQuestion.options, {
+    type: 'quiz',
+    correct_option_id: validQuestion.correctIndex,
+    explanation: `\nℹ️ توضیح: ${validQuestion.explanation}`,
+    is_anonymous: false,
+    allows_multiple_answers: false
+  });
+
+  // افزایش ایندکس برای سوال بعدی
+  quizIndex = (quizIndex + 1) % quizQuestions.length;
 });
 
 //-------------------------------

@@ -1,0 +1,38 @@
+{
+  "zephyr": {
+    "target": "12h"
+  },
+  "ela": {
+    "target": "16h"
+  },
+  "Mobina": {
+    "target": "14h"
+  },
+  "Yasamin": {
+    "target": "13h"
+  },
+  "sanaz": {
+    "target": "11h"
+  },
+  "Rira": {
+    "target": "15h"
+  },
+  "afsharzades": {
+    "target": "11h"
+  },
+  "marnii": {
+    "target": "11h"
+  },
+  "Mainak": {
+    "target": "8h"
+  },
+  "Meli": {
+    "target": "12h"
+  },
+  "Roya": {
+    "target": "14h"
+  },
+  "nk": {
+    "target": "8h"
+  }
+}

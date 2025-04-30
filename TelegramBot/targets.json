@@ -1,23 +1,62 @@
 {
+  "sosan": {
+    "target": "13h"
+  },
+  "zephyr": {
+    "target": "12h"
+  },
   "roya": {
     "target": "12h"
   },
-  "Sheikh": {
-    "target": "15h"
+  "ela": {
+    "target": "14h"
   },
-  "farazjahani": {
-    "target": "10h"
+  "Mobina": {
+    "target": "14h"
   },
-  "sosan": {
-    "target": "10h"
-  },
-  "Meli": {
+  "Yasamin": {
     "target": "11h"
   },
-  "<Majid/>": {
+  "RAZAN": {
+    "target": "10h"
+  },
+  "sanaz": {
+    "target": "11h"
+  },
+  "zahra": {
+    "target": "10h"
+  },
+  "mhmddl": {
+    "target": "11h"
+  },
+  "s": {
+    "target": "10h"
+  },
+  "Azadeh": {
+    "target": "15h"
+  },
+  "Rira": {
+    "target": "17h"
+  },
+  "ShahAb": {
     "target": "8h"
   },
-  "Me": {
-    "target": "10h"
+  "afsharzades": {
+    "target": "11h"
+  },
+  "marnii": {
+    "target": "11h"
+  },
+  "shasha": {
+    "target": "9h"
+  },
+  "Aras": {
+    "target": "6h"
+  },
+  "Yashar": {
+    "target": "4h"
+  },
+  "nk": {
+    "target": "7h"
   }
 }

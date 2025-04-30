@@ -1,7 +1,12 @@
-const fs = require('fs');
-const path = require('path');
-const os = require('os');
-const crypto = require('crypto'); // حفظ کتابخانه crypto
+// const fs = require('fs');
+// const path = require('path');
+// const os = require('os');
+// const crypto = require('crypto'); // حفظ کتابخانه crypto
+
+import fs from 'fs';
+import path from 'path';
+import os from 'os';
+import crypto from 'crypto';
 
 // تبدیل فرمت زمان به دقیقه
 function convertToMinutes(timeStr) {
@@ -70,7 +75,7 @@ const sortedByStudies = Object.entries(outputData.weeklyHours)
   }))
   .sort((a, b) => b.lastWeekStudy - a.lastWeekStudy);
 
-console.log('\n📌 Weekly Studies Ranking:');
+console.log('\n📌 Weekly Study => +30h');
 sortedByStudies.forEach((person, index) => {
   console.log(
     `${index + 1}. ${person.name}: ${convertToHoursMinutes(
