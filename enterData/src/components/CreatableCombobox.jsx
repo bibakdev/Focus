@@ -8,10 +8,10 @@ import {
   ComboboxOptions,
   Label
 } from '@headlessui/react';
-import usersData from '../../input.json';
 
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';
 import { useState } from 'react';
+import usersData from '../../users.json';
 
 export default function CreatableCombobox({
   selectedPerson,
@@ -19,17 +19,21 @@ export default function CreatableCombobox({
   className
 }) {
   const [people, setPeople] = useState(usersData);
-  console.log();
   const [query, setQuery] = useState('');
-
-  const [isNewItem, setIsNewItem] = useState(false); // کنترل تغییر رنگ مرز
+  const [isNewItem, setIsNewItem] = useState(false);
 
   const filteredPeople =
     query === ''
       ? people
-      : people.filter((person) =>
-          person.name.toLowerCase().includes(query.toLowerCase())
+      : people.filter(
+          (person) =>
+            person.name &&
+            person.name.toLowerCase().includes(query.toLowerCase())
         );
+
+  // چاپ برای دیباگ
+  console.log('Query: ', query);
+  console.log('Filtered People: ', filteredPeople);
 
   const handleKeyDown = (event) => {
     if (event.key === 'Enter' && query.trim() !== '') {
@@ -39,15 +43,14 @@ export default function CreatableCombobox({
 
       if (!exists) {
         const newPerson = { id: people.length + 1, name: query.trim() };
-        setPeople([...people, newPerson]); // اضافه کردن مقدار جدید
-        setSelectedPerson(newPerson); // انتخاب مقدار جدید
-        setIsNewItem(true); // تغییر رنگ مرز
+        setPeople([...people, newPerson]);
+        setSelectedPerson(newPerson);
+        setIsNewItem(true);
 
-        // بعد از ۲ ثانیه رنگ مرز را به حالت عادی برگردان
         setTimeout(() => setIsNewItem(false), 2000);
       }
 
-      setQuery(''); // پاک کردن `input`
+      setQuery('');
     }
   };
 
@@ -76,7 +79,7 @@ export default function CreatableCombobox({
           }
           focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600`}
           onChange={(event) => setQuery(event.target.value)}
-          onKeyDown={handleKeyDown} // مدیریت زدن Enter
+          onKeyDown={handleKeyDown}
           displayValue={(person) => person?.name || ''}
         />
         <ComboboxButton className="absolute inset-y-0 right-0 flex items-center rounded-r-md px-2 focus:outline-none">
@@ -90,7 +93,7 @@ export default function CreatableCombobox({
           <ComboboxOptions className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
             {filteredPeople.map((person) => (
               <ComboboxOption
-                key={`${person.name}-${Math.random()}`}
+                key={person.id}
                 value={person}
                 className="group relative cursor-default select-none py-2 pl-8 pr-4 text-gray-900 data-[focus]:bg-indigo-600 data-[focus]:text-white"
               >
