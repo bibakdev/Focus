@@ -40,7 +40,9 @@ function showTargets() {
     return;
   }
 
-  console.log(chalk.bold('\n🎯 لیست هدف‌های افراد در چالش:\n'));
+  console.log(
+    chalk.bold("\n🎯 The list of participants' goals in the challenge:\n")
+  );
   for (const [name, { target }] of Object.entries(targets)) {
     console.log(` 🎯${chalk.yellow(name)}: ${chalk.cyan(target)}`);
   }
@@ -69,6 +71,12 @@ function runChallenge() {
     if (user?.today) {
       const targetMin = timeToMinutes(target);
       const todayMin = timeToMinutes(user.today);
+      // let symbol;
+      // if (todayMin >= targetMin) {
+      //   symbol = '✅';
+      // } else if (todayMin < targetMin / 2) {
+      //   symbol = '🍌';
+      // }
       const symbol = todayMin >= targetMin ? '✅' : '🍌';
       results.push({ name, target, today: user.today, symbol });
     } else {
@@ -76,7 +84,16 @@ function runChallenge() {
     }
   }
 
-  console.log(chalk.bold('\n🍌 نتیجه چالش موزی:\n'));
+  console.log(
+    chalk.bold(
+      '\n🍌Banana Challenge Results: \n' +
+        '\n' +
+        '(2🍆= remove)' +
+        '\n' +
+        '(daiy study hours < 4h ==>🍆) ' +
+        '\n'
+    )
+  );
   for (const { name, target, today, symbol } of results) {
     console.log(
       `${chalk.yellow(name)} (${chalk.cyan(target)} => ${chalk.magenta(
@@ -127,7 +144,7 @@ function showSummary() {
     return;
   }
 
-  console.log(chalk.bold('\n📈 خلاصه وضعیت افراد در چالش:\n'));
+  console.log(chalk.bold('\n📈 Participants status in the challenge: \n'));
 
   for (const [name, res] of Object.entries(data)) {
     console.log(

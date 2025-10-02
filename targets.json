@@ -1,38 +1,41 @@
 {
-  "zephyr": {
-    "target": "12h"
+  "Mohammad": {
+    "target": "6h 40m"
   },
-  "ela": {
-    "target": "16h"
-  },
-  "Mobina": {
-    "target": "14h"
-  },
-  "Yasamin": {
-    "target": "13h"
-  },
-  "sanaz": {
-    "target": "11h"
-  },
-  "Rira": {
-    "target": "15h"
-  },
-  "afsharzades": {
-    "target": "11h"
-  },
-  "marnii": {
-    "target": "11h"
+  "yosanoriko": {
+    "target": "9h"
   },
   "Mainak": {
+    "target": "7h"
+  },
+  "Elnaz💜": {
+    "target": "4h"
+  },
+  "Hasti": {
+    "target": "4h 30m"
+  },
+  "saghar": {
+    "target": "5h"
+  },
+  "nil": {
+    "target": "4h"
+  },
+  "Selma": {
+    "target": "5h"
+  },
+  "donyaalvandi": {
+    "target": "5h"
+  },
+  "🦷nazanin": {
+    "target": "9h 30m"
+  },
+  "tavallaei": {
+    "target": "6h"
+  },
+  "nzn_mr": {
     "target": "8h"
   },
-  "Meli": {
-    "target": "12h"
-  },
-  "Roya": {
-    "target": "14h"
-  },
-  "nk": {
-    "target": "8h"
+  "rira": {
+    "target": "10h"
   }
 }

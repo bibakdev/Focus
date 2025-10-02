@@ -15,7 +15,7 @@ const usersPath = path.join(__dirname, 'users.json');
 // فعال کردن CORS برای همه درخواست‌ها
 app.use(
   cors({
-    origin: 'http://localhost:5175', // آدرس فرانت‌اند شما
+    origin: 'http://127.0.0.1:3000', // آدرس فرانت‌اند شما
     methods: 'GET,POST',
     allowedHeaders: 'Content-Type'
   })
@@ -34,7 +34,6 @@ app.get('/get-data', (req, res) => {
   }
 });
 
-// ذخیره اطلاعات در input.json و users.json
 app.post('/update-json', (req, res) => {
   try {
     // ذخیره اطلاعات کامل در input.json
@@ -45,20 +44,24 @@ app.post('/update-json', (req, res) => {
     try {
       existingUsers = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
     } catch (error) {
-      // اگر فایل users.json وجود ندارد یا خالی است، یک آرایه خالی در نظر می‌گیریم
       existingUsers = [];
     }
 
-    // اضافه کردن کاربران جدید به لیست قبلی و ایجاد id برای هر کاربر
-    const newUsers = req.body.map((user, index) => ({
-      id: existingUsers.length + index + 1, // اطمینان از اینکه id ها منحصر به فرد باشند
+    // فیلتر کردن فقط کاربرانی که نام آن‌ها در لیست قبلی وجود ندارد
+    const uniqueNewUsers = req.body.filter(
+      (newUser) => !existingUsers.some((user) => user.name === newUser.name)
+    );
+
+    // ایجاد id منحصر به‌فرد برای کاربران جدید
+    const newUsers = uniqueNewUsers.map((user, index) => ({
+      id: existingUsers.length + index + 1,
       name: user.name
     }));
 
-    // ادغام داده‌های قبلی و جدید
+    // ترکیب کاربران قدیمی و جدید (غیر تکراری)
     const updatedUsers = [...existingUsers, ...newUsers];
 
-    // ذخیره داده‌های به روز شده در users.json
+    // ذخیره کاربران به‌روز شده
     fs.writeFileSync(usersPath, JSON.stringify(updatedUsers, null, 2));
 
     res.json({ message: 'Data saved successfully!' });
