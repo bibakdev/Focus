@@ -92,7 +92,7 @@ const sortedByRates = Object.entries(outputData.weeklyHours)
   .filter((person) => person.lastRate !== null)
   .sort((a, b) => b.lastRate - a.lastRate);
 
-console.log('\n📌 Progress (Positive Changes):');
+console.log('\n📌 Weekly Study Progress Compared to Last Week 🔥');
 sortedByRates
   .filter((person) => person.lastRate > 0)
   .forEach((person, index) => {

@@ -66,9 +66,7 @@ function updateHighestWeeklyStudy() {
           previous: '0h 0m',
           highest: currentMax
         };
-        updatedNames.push(
-          `✨ ${name} (رکورد اولیه: ${convertToTimeFormat(currentMax)})`
-        );
+        // ❌ دیگه اینجا updatedNames.push نکن
         continue;
       }
 
@@ -81,11 +79,46 @@ function updateHighestWeeklyStudy() {
           previous: previousTime,
           highest: latestValue
         };
+        // ✅ فقط اینجا اضافه کن به لیست نمایش
         updatedNames.push(
           `🚀 ${name} (${previousTime} 👉 ${convertToTimeFormat(latestValue)})`
         );
       }
     }
+
+    // for (const name in weeklyHours) {
+    //   const weekStudies = weeklyHours[name].weekStudies;
+    //   if (!Array.isArray(weekStudies) || weekStudies.length === 0) continue;
+
+    //   const currentMax = Math.max(...weekStudies);
+    //   const latestValue = weekStudies[weekStudies.length - 1];
+
+    //   // حالت اولیه: هیچ رکوردی برای این فرد وجود ندارد
+    //   if (!highestWeeklyStudy[name]) {
+    //     highestWeeklyStudy[name] = {
+    //       previous: '0h 0m',
+    //       highest: currentMax
+    //     };
+    //     updatedNames.push(
+    //       `✨ ${name} (رکورد اولیه: ${convertToTimeFormat(currentMax)})`
+    //     );
+    //     continue;
+    //   }
+
+    //   // اگر مقدار جدید از رکورد قبلی بیشتر بود
+    //   if (latestValue > highestWeeklyStudy[name].highest) {
+    //     const previousTime = convertToTimeFormat(
+    //       highestWeeklyStudy[name].highest
+    //     );
+    //     highestWeeklyStudy[name] = {
+    //       previous: previousTime,
+    //       highest: latestValue
+    //     };
+    //     updatedNames.push(
+    //       `🚀 ${name} (${previousTime} 👉 ${convertToTimeFormat(latestValue)})`
+    //     );
+    //   }
+    // }
 
     const sortedData = Object.entries(highestWeeklyStudy)
       .sort(([, a], [, b]) => b.highest - a.highest)
@@ -95,9 +128,7 @@ function updateHighestWeeklyStudy() {
     console.log('✅ فایل highestStudyWeek.json به‌روزرسانی شد.');
 
     if (updatedNames.length > 0) {
-      console.log(
-        'Weekly Record Smashed — Name Added to the Wall of Fame! 🔥/n'
-      );
+      console.log('Weekly Record Smashed — Name Added to the Wall of Fame! 🔥');
       updatedNames.forEach((n) => console.log(n));
     } else {
       console.log('رکورد جدیدی شناسایی نشد.');

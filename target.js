@@ -30,6 +30,26 @@ const timeToMinutes = (time) => {
   return hours * 60 + minutes;
 };
 
+// -----------------------------
+
+// function showTargets() {
+//   const raw = getFileContent(targetsPath);
+//   let targets = {};
+//   try {
+//     targets = JSON.parse(raw);
+//   } catch {
+//     console.log(chalk.red('❌ targets.json خراب است.'));
+//     return;
+//   }
+
+//   console.log(
+//     chalk.bold("\n🎯 The list of participants' goals in the challenge 🍌:\n")
+//   );
+//   for (const [name, { target }] of Object.entries(targets)) {
+//     console.log(` 🎯${chalk.yellow(name)}: ${chalk.cyan(target)}`);
+//   }
+// }
+
 function showTargets() {
   const raw = getFileContent(targetsPath);
   let targets = {};
@@ -41,12 +61,27 @@ function showTargets() {
   }
 
   console.log(
-    chalk.bold("\n🎯 The list of participants' goals in the challenge:\n")
+    chalk.bold("\n🎯 The list of participants' goals in the challenge 🍌:\n")
   );
-  for (const [name, { target }] of Object.entries(targets)) {
+
+  // مرتب‌سازی بر اساس مقدار target (بیشترین به کمترین)
+  const sortedTargets = Object.entries(targets).sort((a, b) => {
+    const toMinutes = (entry) => {
+      const target = entry[1].target;
+      const parts = target.match(/(\d+)h\s*(\d+)?m?/);
+      const hours = parts ? parseInt(parts[1]) || 0 : 0;
+      const minutes = parts && parts[2] ? parseInt(parts[2]) || 0 : 0;
+      return hours * 60 + minutes;
+    };
+    return toMinutes(b) - toMinutes(a); // مرتب‌سازی نزولی
+  });
+
+  for (const [name, { target }] of sortedTargets) {
     console.log(` 🎯${chalk.yellow(name)}: ${chalk.cyan(target)}`);
   }
 }
+
+// -------------------------------------
 
 // اجرای چالش
 function runChallenge() {
@@ -71,18 +106,41 @@ function runChallenge() {
     if (user?.today) {
       const targetMin = timeToMinutes(target);
       const todayMin = timeToMinutes(user.today);
-      // let symbol;
-      // if (todayMin >= targetMin) {
-      //   symbol = '✅';
-      // } else if (todayMin < targetMin / 2) {
-      //   symbol = '🍌';
-      // }
-      const symbol = todayMin >= targetMin ? '✅' : '🍌';
+
+      // این بخش جدید:
+      let symbol;
+      if (todayMin < 240) {
+        symbol = '🍆';
+      } else if (todayMin >= targetMin) {
+        symbol = '✅';
+      } else {
+        symbol = '🍌';
+      }
+
       results.push({ name, target, today: user.today, symbol });
     } else {
       results.push({ name, target, today: '---', symbol: '🍆' });
     }
+
+    // if (user?.today) {
+    //   const targetMin = timeToMinutes(target);
+    //   const todayMin = timeToMinutes(user.today);
+    //   // let symbol;
+    //   // if (todayMin >= targetMin) {
+    //   //   symbol = '✅';
+    //   // } else if (todayMin < targetMin / 2) {
+    //   //   symbol = '🍌';
+    //   // }
+    //   const symbol = todayMin >= targetMin ? '✅' : '🍌';
+    //   results.push({ name, target, today: user.today, symbol });
+    // } else {
+    //   results.push({ name, target, today: '---', symbol: '🍆' });
+    // }
   }
+
+  // ✅ مرتب‌سازی بر اساس نوع نتیجه
+  const order = { '✅': 1, '🍌': 2, '🍆': 3 };
+  results.sort((a, b) => order[a.symbol] - order[b.symbol]);
 
   console.log(
     chalk.bold(
@@ -160,13 +218,65 @@ function showSummary() {
 }
 
 // اجرای نهایی
-showTargets();
-const results = runChallenge();
-if (results) {
-  storeIfChanged(results);
+const args = process.argv.slice(2);
+const command = args[0];
+
+if (command === 'list') {
+  // فقط لیست شرکت‌کننده‌ها
+  showTargets();
+} else if (command === 'summary') {
+  // فقط نمایش خلاصه‌ی کل چالش‌ها
   showSummary();
+} else if (command === 'active') {
+  // فقط نتایج افرادی که امروز حضور دارند
+  showTargets();
+  const results = runChallenge();
+  if (results) {
+    const activeResults = results.filter((r) => r.today !== '---');
+    console.log(chalk.bold('\n📊 Active participants today:\n'));
+    for (const { name, target, today, symbol } of activeResults) {
+      console.log(
+        `${chalk.yellow(name)} (${chalk.cyan(target)} => ${chalk.magenta(
+          today
+        )}) ${symbol}`
+      );
+    }
+  }
+} else {
+  // اجرای عادی بدون نمایش خلاصه‌ی کلی
+  showTargets();
+  const results = runChallenge();
+  if (results) {
+    storeIfChanged(results);
+  }
 }
 
+// TODO: The Second Version
+// const args = process.argv.slice(2);
+
+// if (args[0] === 'list') {
+//   // فقط نمایش لیست شرکت‌کننده‌ها
+//   showTargets();
+// } else {
+//   // اجرای کامل چالش
+//   showTargets();
+//   const results = runChallenge();
+//   if (results) {
+//     storeIfChanged(results);
+//     showSummary();
+//   }
+// }
+
+// TODO: The first Version
+// showTargets();
+// const results = runChallenge();
+// if (results) {
+//   storeIfChanged(results);
+//   showSummary();
+// }
+
+// ------------------------------
+// ------------------------------
 // const fs = require('fs');
 // const path = require('path');
 

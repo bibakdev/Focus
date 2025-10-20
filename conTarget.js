@@ -6,10 +6,10 @@ import chalk from 'chalk';
 import { fileURLToPath } from 'url';
 
 // TODO: change time challenge
-const TOTAL_DAYS = 5;
-const GOLDEN_DAYS = 5;
-const SILVER_DAYS = 3;
-const BRONZE_DAYS = 1;
+const TOTAL_DAYS = 14; //14;
+const GOLDEN_DAYS = 14; //14;
+const SILVER_DAYS = 11; //11;
+const BRONZE_DAYS = 8; //8;
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -38,6 +38,20 @@ const timeToMinutes = (time) => {
 };
 
 // ---------------- نمایش تارگت‌ها ----------------
+// function showTargets() {
+//   let targets = {};
+//   try {
+//     targets = JSON.parse(getFileContent(targetsPath));
+//   } catch {
+//     console.log(chalk.red('❌ consistencyTargets.json خراب است.'));
+//     return;
+//   }
+
+//   console.log(chalk.bold(`\n🎯 Consistency Challenge Targets 🔄: \n`));
+//   for (const [name, { target }] of Object.entries(targets)) {
+//     console.log(` 🎯 ${chalk.yellow(name)}: ${chalk.cyan(target)}`);
+//   }
+// }
 function showTargets() {
   let targets = {};
   try {
@@ -47,8 +61,20 @@ function showTargets() {
     return;
   }
 
-  console.log(chalk.bold(`\n🎯 Consistency Challenge Targets: \n`));
-  for (const [name, { target }] of Object.entries(targets)) {
+  console.log(chalk.bold(`\n🎯 Consistency Challenge Targets 🔄: \n`));
+
+  // مرتب‌سازی بر اساس مقدار ساعت (target)
+  const sortedTargets = Object.entries(targets).sort((a, b) => {
+    const toMinutes = (time) => {
+      const parts = time[1].target.match(/(\d+)h\s*(\d+)?m?/);
+      const hours = parts ? parseInt(parts[1]) || 0 : 0;
+      const minutes = parts && parts[2] ? parseInt(parts[2]) || 0 : 0;
+      return hours * 60 + minutes;
+    };
+    return toMinutes(b) - toMinutes(a); // از بیشترین به کمترین
+  });
+
+  for (const [name, { target }] of sortedTargets) {
     console.log(` 🎯 ${chalk.yellow(name)}: ${chalk.cyan(target)}`);
   }
 }
@@ -179,6 +205,8 @@ const args = process.argv.slice(2);
 if (args[0] === 'end') {
   endChallenge();
   showSummary();
+} else if (args[0] === 'list') {
+  showTargets();
 } else {
   showTargets();
   const results = runChallenge();
@@ -194,15 +222,22 @@ if (args[0] === 'end') {
 
       console.log(
         chalk.bold(
-          `\n📊 Consistency Challenge Results: (${daysPassed}d => ${totalDays}d)\n`
+          `\n🔄 Consistency Challenge Results: (${daysPassed}d => ${totalDays}d)\n`
         )
       );
 
+      // ✅ مرتب‌سازی: اول پاس‌ها، بعد ناپاس‌ها
+      updatedResults.sort((a, b) => {
+        if (a.pass === b.pass) return 0;
+        return a.pass ? -1 : 1;
+      });
+
       for (const { name, target, today, pass } of updatedResults) {
+        const userCount = data[name]?.count || 0;
         console.log(
           `${chalk.yellow(name)} (${chalk.cyan(target)} => ${chalk.magenta(
             today
-          )}) ${pass ? '✅' : '❌'}`
+          )}) ${pass ? '✅' : '❌'} (${chalk.green(userCount + 'd')})`
         );
       }
 
@@ -213,22 +248,28 @@ if (args[0] === 'end') {
 
         for (let user in data) {
           const lastCount = data[user].count;
-          if (lastCount >= GOLDEN_DAYS) golden.push(user);
-          else if (lastCount >= SILVER_DAYS) silver.push(user);
-          else if (lastCount >= BRONZE_DAYS) bronze.push(user);
+          if (lastCount >= GOLDEN_DAYS) golden.push(`${user} (${lastCount}d)`);
+          else if (lastCount >= SILVER_DAYS)
+            silver.push(`${user} (${lastCount}d)`);
+          else if (lastCount >= BRONZE_DAYS)
+            bronze.push(`${user} (${lastCount}d)`);
         }
 
-        console.log(chalk.bold('🥇 دسته‌بندی استمرار کاربران:\n'));
+        console.log(chalk.bold('👑Champions of Consistency:\n'));
         console.log(
-          `🏆 استمرار طلایی → ${golden.length ? golden.join(' - ') : 'هیچ کس'}`
-        );
-        console.log(
-          `🥈 استمرار نقره‌ای → ${
-            silver.length ? silver.join(' - ') : 'هیچ کس'
+          `🏆 Golden Consistency → ${
+            golden.length ? golden.join(' - ') : '---'
           }`
         );
         console.log(
-          `🥉 استمرار برنزی → ${bronze.length ? bronze.join(' - ') : 'هیچ کس'}`
+          `🥈 Silver Consistency → ${
+            silver.length ? silver.join(' - ') : '---'
+          }`
+        );
+        console.log(
+          `🥉 Bronze Consistency → ${
+            bronze.length ? bronze.join(' - ') : '---'
+          }`
         );
       }
 
