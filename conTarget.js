@@ -209,6 +209,16 @@ if (args[0] === 'end') {
   showTargets();
 } else if (args[0] === 'summary') {
   showSummary();
+} else if (args[0] === 'help') {
+  console.log(`
+Available commands:
+
+  end       → End the challenge and show summary
+  list      → Show all participants
+  summary   → Show current summary of results
+  help      → Show this help message
+  (no arg)  → Run the challenge and show today's results
+  `);
 } else {
   showTargets();
   const results = runChallenge();

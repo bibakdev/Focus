@@ -256,6 +256,15 @@ if (command === 'list') {
 } else if (command === 'summary') {
   // فقط نمایش خلاصه‌ی کل چالش‌ها
   showSummary();
+} else if (command === 'help') {
+  console.log(`
+Available commands:
+
+  list      → Show all participants
+  summary   → Show current summary of results
+  help      → Show this help message
+  (no arg)  → Run the challenge and show today's results
+  `);
 } else {
   // اجرای عادی (بدون active)
   showTargets();
