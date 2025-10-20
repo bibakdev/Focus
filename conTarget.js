@@ -207,6 +207,8 @@ if (args[0] === 'end') {
   showSummary();
 } else if (args[0] === 'list') {
   showTargets();
+} else if (args[0] === 'summary') {
+  showSummary();
 } else {
   showTargets();
   const results = runChallenge();
@@ -281,7 +283,6 @@ if (args[0] === 'end') {
       // console.log(`dayspassed: ${daysPassed}, totalDays: ${totalDays}`);
     }
     // اگر تغییر نبود → فقط پیام input تکراری چاپ شده است
-    showSummary();
   }
 }
 
