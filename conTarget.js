@@ -234,10 +234,15 @@ if (args[0] === 'end') {
 
       for (const { name, target, today, pass } of updatedResults) {
         const userCount = data[name]?.count || 0;
+        const celebration =
+          userCount >= TOTAL_DAYS ? chalk.bold(' 🎉🎉🎉') : ''; // 🎯 اگر 14 روز کامل شده بود
+
         console.log(
           `${chalk.yellow(name)} (${chalk.cyan(target)} => ${chalk.magenta(
             today
-          )}) ${pass ? '✅' : '❌'} (${chalk.green(userCount + 'd')})`
+          )}) ${pass ? '✅' : '❌'} (${chalk.green(
+            userCount + 'd'
+          )})${celebration}`
         );
       }
 
