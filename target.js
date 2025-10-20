@@ -217,6 +217,35 @@ function showSummary() {
   }
 }
 
+function showSummaryForActive(results) {
+  let data = {};
+  try {
+    data = JSON.parse(getFileContent(resultsPath)) || {};
+  } catch {
+    console.log(chalk.gray('\n📁 هنوز نتیجه‌ای ذخیره نشده.'));
+    return;
+  }
+
+  const activeNames = results
+    .filter((r) => r.today !== '---')
+    .map((r) => r.name);
+  console.log(chalk.bold("\n📈 Summary for today's participants:\n"));
+
+  for (const name of activeNames) {
+    const res = data[name];
+    if (!res) continue;
+    console.log(
+      `${chalk.yellow(name)} => Challenge Joined: ${chalk.bold(
+        res.count
+      )} times`
+    );
+    console.log(`  🍌: ${res['🍌']}`);
+    console.log(`  🍆: ${res['🍆']}`);
+    console.log(`  ✅: ${res['✅']}`);
+    console.log('---------------');
+  }
+}
+
 // اجرای نهایی
 const args = process.argv.slice(2);
 const command = args[0];
@@ -227,29 +256,32 @@ if (command === 'list') {
 } else if (command === 'summary') {
   // فقط نمایش خلاصه‌ی کل چالش‌ها
   showSummary();
-} else if (command === 'active') {
-  // فقط نتایج افرادی که امروز حضور دارند
+} else {
+  // اجرای عادی (بدون active)
   showTargets();
   const results = runChallenge();
-  if (results) {
-    const activeResults = results.filter((r) => r.today !== '---');
-    console.log(chalk.bold('\n📊 Active participants today:\n'));
-    for (const { name, target, today, symbol } of activeResults) {
-      console.log(
-        `${chalk.yellow(name)} (${chalk.cyan(target)} => ${chalk.magenta(
-          today
-        )}) ${symbol}`
-      );
+  if (results.length) {
+    storeIfChanged(results);
+    showSummaryForActive(results);
+
+    // مرحله ۴: نمایش اسم کسانی که ✅ گرفتن
+    const passed = results.filter((r) => r.symbol === '✅').map((r) => r.name);
+    if (passed.length > 0) {
+      console.log(chalk.bold(`\n🍌🎯${passed.join('-')}`));
+    } else {
+      console.log(chalk.gray('\n😢 هیچ‌کس امروز ✅ نگرفت.'));
     }
   }
-} else {
-  // اجرای عادی بدون نمایش خلاصه‌ی کلی
-  showTargets();
-  const results = runChallenge();
-  if (results) {
-    storeIfChanged(results);
-  }
 }
+
+// else {
+//   // اجرای عادی بدون نمایش خلاصه‌ی کلی
+//   showTargets();
+//   const results = runChallenge();
+//   if (results) {
+//     storeIfChanged(results);
+//   }
+// }
 
 // TODO: The Second Version
 // const args = process.argv.slice(2);
