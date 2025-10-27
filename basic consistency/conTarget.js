@@ -6,10 +6,10 @@ import chalk from 'chalk';
 import { fileURLToPath } from 'url';
 
 // TODO: change time challenge
-const TOTAL_DAYS = 14; //14;
-const GOLDEN_DAYS = 14; //14;
-const SILVER_DAYS = 11; //11;
-const BRONZE_DAYS = 8; //8;
+const TOTAL_DAYS = 7; //14;
+const GOLDEN_DAYS = 7; //14;
+const SILVER_DAYS = 6; //11;
+const BRONZE_DAYS = 5; //8;
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 

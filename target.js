@@ -276,7 +276,7 @@ Available commands:
     // مرحله ۴: نمایش اسم کسانی که ✅ گرفتن
     const passed = results.filter((r) => r.symbol === '✅').map((r) => r.name);
     if (passed.length > 0) {
-      console.log(chalk.bold(`\n🍌🎯${passed.join('-')}`));
+      console.log(chalk.bold(`\n🍌🏅${passed.join('-')}`));
     } else {
       console.log(chalk.gray('\n😢 هیچ‌کس امروز ✅ نگرفت.'));
     }

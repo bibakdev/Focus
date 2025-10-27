@@ -147,6 +147,10 @@
     "previous": "0h 0m",
     "highest": 984
   },
+  "Guillotine": {
+    "previous": "16h 6m",
+    "highest": 975
+  },
   "Pri": {
     "previous": "15h 2m",
     "highest": 972
@@ -154,10 +158,6 @@
   "reno": {
     "previous": "16h 3m",
     "highest": 970
-  },
-  "Guillotine": {
-    "previous": "6h 15m",
-    "highest": 966
   },
   "marnii": {
     "previous": "10h 14m",
@@ -223,6 +223,14 @@
     "previous": "11h 0m",
     "highest": 900
   },
+  "🦷nazanin": {
+    "previous": "11h 19m",
+    "highest": 900
+  },
+  "زهرا": {
+    "previous": "14h 52m",
+    "highest": 900
+  },
   "<Majid/>": {
     "previous": "11h 24m",
     "highest": 899
@@ -230,10 +238,6 @@
   "Aes": {
     "previous": "14h 7m",
     "highest": 895
-  },
-  "زهرا": {
-    "previous": "14h 40m",
-    "highest": 892
   },
   "raz": {
     "previous": "9h 13m",
@@ -270,6 +274,10 @@
   "student": {
     "previous": "9h 37m",
     "highest": 843
+  },
+  "Messi": {
+    "previous": "13h 42m",
+    "highest": 841
   },
   "Pathoroy": {
     "previous": "6h 48m",
@@ -431,8 +439,12 @@
     "previous": "11h 25m",
     "highest": 707
   },
-  "🐚🦋": {
+  "Shadi": {
     "previous": "8h 39m",
+    "highest": 705
+  },
+  "f.a.e.z.e.97": {
+    "previous": "10h 46m",
     "highest": 705
   },
   "Rana": {
@@ -483,10 +495,6 @@
     "previous": "11h 7m",
     "highest": 681
   },
-  "🦷nazanin": {
-    "previous": "10h 38m",
-    "highest": 679
-  },
   "mahsa": {
     "previous": "10h 0m",
     "highest": 675
@@ -499,9 +507,13 @@
     "previous": "0h 0m",
     "highest": 673
   },
-  "Messi": {
-    "previous": "10h 38m",
-    "highest": 669
+  "mrym": {
+    "previous": "10h 6m",
+    "highest": 672
+  },
+  "moein": {
+    "previous": "9h 43m",
+    "highest": 670
   },
   "Asra": {
     "previous": "5h 1m",
@@ -543,16 +555,16 @@
     "previous": "10h 0m",
     "highest": 650
   },
+  "MahiSiah": {
+    "previous": "9h 36m",
+    "highest": 649
+  },
   "Tahereh": {
     "previous": "0h 0m",
     "highest": 648
   },
   "Anurag": {
     "previous": "10h 10m",
-    "highest": 646
-  },
-  "f.a.e.z.e.97": {
-    "previous": "10h 21m",
     "highest": 646
   },
   "saghar": {
@@ -625,10 +637,6 @@
   },
   "🎯": {
     "previous": "9h 47m",
-    "highest": 606
-  },
-  "mrym": {
-    "previous": "10h 3m",
     "highest": 606
   },
   "elnaz": {
@@ -855,6 +863,10 @@
     "previous": "6h 40m",
     "highest": 500
   },
+  "Niil": {
+    "previous": "4h 35m",
+    "highest": 500
+  },
   "nastaran.78za": {
     "previous": "7h 5m",
     "highest": 497
@@ -871,6 +883,10 @@
     "previous": "5h 41m",
     "highest": 495
   },
+  "Leonn": {
+    "previous": "0h 0m",
+    "highest": 494
+  },
   "ChipZz": {
     "previous": "7h 28m",
     "highest": 491
@@ -879,9 +895,9 @@
     "previous": "0h 0m",
     "highest": 490
   },
-  "MahiSiah": {
-    "previous": "0h 0m",
-    "highest": 484
+  "zahra🌼": {
+    "previous": "7h 40m",
+    "highest": 485
   },
   "come back": {
     "previous": "0h 0m",
@@ -929,6 +945,10 @@
   },
   "fatemeharya22": {
     "previous": "6h 40m",
+    "highest": 466
+  },
+  "Parham": {
+    "previous": "4h 33m",
     "highest": 466
   },
   "SILVER": {
@@ -995,10 +1015,6 @@
     "previous": "2h 49m",
     "highest": 445
   },
-  "zahra🌼": {
-    "previous": "6h 35m",
-    "highest": 445
-  },
   "maedeh": {
     "previous": "6h 42m",
     "highest": 443
@@ -1027,9 +1043,17 @@
     "previous": "6h 0m",
     "highest": 438
   },
+  "Mahtab": {
+    "previous": "6h 49m",
+    "highest": 437
+  },
   "Fio": {
     "previous": "0h 0m",
     "highest": 435
+  },
+  "yekta": {
+    "previous": "7h 12m",
+    "highest": 433
   },
   "Goli": {
     "previous": "0h 0m",
@@ -1067,6 +1091,10 @@
     "previous": "5h 50m",
     "highest": 420
   },
+  "inouri.f": {
+    "previous": "0h 0m",
+    "highest": 417
+  },
   "رها": {
     "previous": "0h 0m",
     "highest": 414
@@ -1079,12 +1107,12 @@
     "previous": "6h 15m",
     "highest": 413
   },
+  "kiana": {
+    "previous": "6h 14m",
+    "highest": 412
+  },
   "shirin": {
     "previous": "0h 0m",
-    "highest": 410
-  },
-  "yekta": {
-    "previous": "6h 22m",
     "highest": 410
   },
   "من سبز خواهم شد": {
@@ -1143,21 +1171,21 @@
     "previous": "0h 0m",
     "highest": 380
   },
+  "FaFa🧚‍♀️": {
+    "previous": "0h 0m",
+    "highest": 378
+  },
   "sogol.karimi": {
     "previous": "5h 25m",
-    "highest": 375
-  },
-  "moein": {
-    "previous": "5h 27m",
     "highest": 375
   },
   "fa": {
     "previous": "0h 0m",
     "highest": 375
   },
-  "kiana": {
-    "previous": "5h 30m",
-    "highest": 374
+  "Naveen": {
+    "previous": "5h 50m",
+    "highest": 375
   },
   "AViCENNA": {
     "previous": "0h 0m",
@@ -1239,6 +1267,10 @@
     "previous": "0h 0m",
     "highest": 336
   },
+  "Earthquake": {
+    "previous": "4h 31m",
+    "highest": 333
+  },
   "seTayesh": {
     "previous": "0h 0m",
     "highest": 332
@@ -1307,6 +1339,10 @@
     "previous": "4h 17m",
     "highest": 309
   },
+  "ZEYNAB": {
+    "previous": "4h 39m",
+    "highest": 308
+  },
   "reyan": {
     "previous": "3h 32m",
     "highest": 305
@@ -1340,6 +1376,10 @@
     "highest": 300
   },
   "Dr.Narjes": {
+    "previous": "0h 0m",
+    "highest": 300
+  },
+  "kassieboy": {
     "previous": "0h 0m",
     "highest": 300
   },
@@ -1395,10 +1435,6 @@
     "previous": "0h 0m",
     "highest": 281
   },
-  "Niil": {
-    "previous": "0h 0m",
-    "highest": 275
-  },
   "Remy": {
     "previous": "0h 0m",
     "highest": 273
@@ -1407,10 +1443,6 @@
     "previous": "0h 0m",
     "highest": 272
   },
-  "Earthquake": {
-    "previous": "4h 27m",
-    "highest": 271
-  },
   "marzi": {
     "previous": "0h 0m",
     "highest": 269
@@ -1418,6 +1450,10 @@
   "boun't": {
     "previous": "0h 0m",
     "highest": 266
+  },
+  "Miya": {
+    "previous": "0h 0m",
+    "highest": 261
   },
   "parisaa": {
     "previous": "0h 0m",
@@ -1456,6 +1492,10 @@
     "highest": 240
   },
   "i can": {
+    "previous": "0h 0m",
+    "highest": 240
+  },
+  "mokhtarpoursana": {
     "previous": "0h 0m",
     "highest": 240
   },

@@ -140,11 +140,11 @@ regress.forEach((entry, index) => {
   );
 });
 
-console.log('\ncount ranking:');
-if (countRanking.length === 0) console.log('هیچ موردی یافت نشد.');
-countRanking.forEach((entry, index) => {
-  console.log(`${index + 1}. ${entry.name} => ${entry.count}`);
-});
+// console.log('\ncount ranking:');
+// if (countRanking.length === 0) console.log('هیچ موردی یافت نشد.');
+// countRanking.forEach((entry, index) => {
+//   console.log(`${index + 1}. ${entry.name} => ${entry.count}`);
+// });
 
 console.log('\nzero difference:');
 if (zeroDifference.length === 0) console.log('هیچ موردی یافت نشد.');
