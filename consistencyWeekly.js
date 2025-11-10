@@ -239,9 +239,13 @@ Available commands:
       );
 
       // ✅ مرتب‌سازی: اول پاس‌ها، بعد ناپاس‌ها
+      // داخل هر گروه، مرتب‌سازی براساس target از زیاد به کم
       updatedResults.sort((a, b) => {
-        if (a.pass === b.pass) return 0;
-        return a.pass ? -1 : 1;
+        // اول پاس‌دارها از ناپاس‌ها جدا بشن
+        if (a.pass !== b.pass) return a.pass ? -1 : 1;
+
+        // اگر هر دو پاس یا هر دو ناپاس بودن → sort بر اساس target descending
+        return timeToMinutes(b.target) - timeToMinutes(a.target);
       });
 
       for (const { name, target, today, pass } of updatedResults) {

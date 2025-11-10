@@ -6,7 +6,9 @@ export default function GetTime({
   min,
   hour,
   onChangeMin,
-  onChangeHour
+  onChangeHour,
+  maxMin,
+  maxHour
 }) {
   return (
     <div className="flex items-center my-4">
@@ -22,10 +24,11 @@ export default function GetTime({
           <div className="ml-2 my-5">
             <input
               id="weekly"
-              type="text"
+              type="number"
+              max={maxHour}
               value={hour || ''}
               onChange={(e) => onChangeHour(Number(e.target.value))}
-              className="block w-15 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+              className="block w-20 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
             />
           </div>
         </div>
@@ -39,10 +42,11 @@ export default function GetTime({
           <div className="ml-2 my-5">
             <input
               id="weekly"
-              type="text"
+              type="number"
+              max={maxMin}
               value={min || ''}
               onChange={(e) => onChangeMin(Number(e.target.value))}
-              className="block w-15 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+              className="block w-20 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
             />
           </div>
         </div>

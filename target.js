@@ -140,8 +140,14 @@ function runChallenge() {
 
   // ✅ مرتب‌سازی بر اساس نوع نتیجه
   const order = { '✅': 1, '🍌': 2, '🍆': 3 };
-  results.sort((a, b) => order[a.symbol] - order[b.symbol]);
-
+results.sort((a, b) => {
+  // اول بر اساس نوع (symbol)
+  if (order[a.symbol] !== order[b.symbol]) {
+    return order[a.symbol] - order[b.symbol];
+  }
+  // اگر نوعشون مثل هم بود -> بر اساس target از زیاد به کم
+  return timeToMinutes(b.target) - timeToMinutes(a.target);
+});
   console.log(
     chalk.bold(
       '\n🍌Banana Challenge Results: \n' +
@@ -276,7 +282,7 @@ Available commands:
     // مرحله ۴: نمایش اسم کسانی که ✅ گرفتن
     const passed = results.filter((r) => r.symbol === '✅').map((r) => r.name);
     if (passed.length > 0) {
-      console.log(chalk.bold(`\n🍌🏅${passed.join('-')}`));
+      console.log(chalk.bold(`\n🍌${passed.join('-')}`));
     } else {
       console.log(chalk.gray('\n😢 هیچ‌کس امروز ✅ نگرفت.'));
     }

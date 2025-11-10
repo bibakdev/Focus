@@ -49,6 +49,8 @@ export default function UserForm({ data, setData }) {
           onChangeMin={setMinWeek}
           hour={hourWeek}
           onChangeHour={setHourWeek}
+          maxMin={59}
+          maxHour={120}
         />
         <GetTime
           target="daily"
@@ -56,6 +58,8 @@ export default function UserForm({ data, setData }) {
           onChangeMin={setMinDay}
           hour={hourDay}
           onChangeHour={setHourDay}
+          maxMin={59}
+          maxHour={20}
         />
       </div>
       <button
