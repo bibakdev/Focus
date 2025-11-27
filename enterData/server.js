@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = 5000;
+const PORT = 5001;
 const filePath = path.join(__dirname, 'input.json');
 const usersPath = path.join(__dirname, 'users.json');
 

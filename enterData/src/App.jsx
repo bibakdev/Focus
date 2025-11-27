@@ -6,7 +6,7 @@ function App() {
   const handleClick = async () => {
     // مسیر فایل JSON
 
-    const response = await fetch('http://localhost:5000/update-json', {
+    const response = await fetch('http://localhost:5001/update-json', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)

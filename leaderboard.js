@@ -48,6 +48,12 @@ function compare(s1, s2) {
   console.log(`${emoji_common}${common.join('-')}`);
   console.log(`${emoji_s2}${only2.join('-')}`);
   console.log(`${emoji_s1}${only1.join('-')}`);
+  console.log('---------------------------------');
+  console.log(
+    `(${emoji_common}${common.join('-')}
+                ${emoji_s2}${only2.join('-')}
+                ${emoji_s1}${only1.join('-')})`.length
+  );
 }
 
 // ---------- flow ----------

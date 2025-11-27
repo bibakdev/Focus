@@ -1,12 +1,9 @@
 {
-  "f.a.e.z.e.97": {
-    "target": "8h"
-  },
   "nil": {
     "target": "4h"
   },
   "yekta": {
-    "target": "6h 30m"
+    "target": "7h 30m"
   },
   "Mainak": {
     "target": "7h"
@@ -14,40 +11,25 @@
   "Mobina": {
     "target": "8h"
   },
+  "Shadi": {
+    "target": "4h"
+  },
+  "f.a.e.z.e.97": {
+    "target": "9h"
+  },
+  "MEL": {
+    "target": "6h"
+  },
   "yosanoriko": {
     "target": "12h"
   },
-  "MEL": {
-    "target": "5h 30m"
+  "FAFA": {
+    "target": "7h 30m"
   },
-  "🦷nazanin": {
-    "target": "7h"
+  "fatemeh": {
+    "target": "7h 30m"
   },
-  "<Majid/>": {
-    "target": "9h"
-  },
-  "nzn_mr": {
-    "target": "8h"
-  },
-  "Niloofar": {
-    "target": "4h 30m"
-  },
-  "زهرا": {
-    "target": "10h"
-  },
-  "Mushfiqur": {
-    "target": "6h"
-  },
-  "Rira": {
-    "target": "11h"
-  },
-  "Parham": {
-    "target": "7h"
-  },
-  "reyhane": {
-    "target": "6h"
-  },
-  "Sanaz⭐️": {
-    "target": "4h"
+  "saye": {
+    "target": "5h"
   }
 }

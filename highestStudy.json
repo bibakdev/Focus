@@ -119,6 +119,10 @@
     "previous": "13h 15m",
     "highest": 1014
   },
+  "nil": {
+    "previous": "15h 51m",
+    "highest": 1014
+  },
   "Kim": {
     "previous": "0h 0m",
     "highest": 1009
@@ -171,10 +175,6 @@
     "previous": "10h 14m",
     "highest": 951
   },
-  "nil": {
-    "previous": "14h 37m",
-    "highest": 951
-  },
   "Mobina": {
     "previous": "13h 31m",
     "highest": 946
@@ -198,6 +198,10 @@
   "zephyr": {
     "previous": "13h 43m",
     "highest": 916
+  },
+  "moein": {
+    "previous": "14h 24m",
+    "highest": 909
   },
   "zahra": {
     "previous": "13h 21m",
@@ -231,7 +235,7 @@
     "previous": "11h 0m",
     "highest": 900
   },
-  "🦷nazanin": {
+  "nazanin": {
     "previous": "11h 19m",
     "highest": 900
   },
@@ -273,6 +277,10 @@
   },
   "Tholfiqar": {
     "previous": "9h 43m",
+    "highest": 853
+  },
+  "Riri": {
+    "previous": "12h 38m",
     "highest": 853
   },
   "roya": {
@@ -319,6 +327,10 @@
     "previous": "12h 12m",
     "highest": 823
   },
+  "f.nekochan": {
+    "previous": "8h 0m",
+    "highest": 817
+  },
   "mohamed ansam": {
     "previous": "8h 57m",
     "highest": 815
@@ -351,6 +363,10 @@
     "previous": "0h 0m",
     "highest": 793
   },
+  "yosanoriko": {
+    "previous": "12h 54m",
+    "highest": 793
+  },
   "ROY": {
     "previous": "13h 0m",
     "highest": 786
@@ -362,6 +378,10 @@
   "you can do it": {
     "previous": "5h 41m",
     "highest": 781
+  },
+  "f.a.e.z.e.97": {
+    "previous": "12h 23m",
+    "highest": 777
   },
   "HypxaH": {
     "previous": "12h 19m",
@@ -395,17 +415,13 @@
     "previous": "12h 10m",
     "highest": 752
   },
-  "Riri": {
-    "previous": "11h 14m",
-    "highest": 750
+  "rasoul.hekmatyar": {
+    "previous": "10h 3m",
+    "highest": 744
   },
   "tarane": {
     "previous": "10h 35m",
     "highest": 737
-  },
-  "yosanoriko": {
-    "previous": "12h 8m",
-    "highest": 732
   },
   "nila": {
     "previous": "10h 0m",
@@ -417,6 +433,10 @@
   },
   "ftmh1387": {
     "previous": "12h 1m",
+    "highest": 723
+  },
+  "FAFA": {
+    "previous": "8h 35m",
     "highest": 723
   },
   "MahiSiah": {
@@ -459,10 +479,6 @@
     "previous": "8h 39m",
     "highest": 705
   },
-  "f.a.e.z.e.97": {
-    "previous": "10h 46m",
-    "highest": 705
-  },
   "Rana": {
     "previous": "9h 18m",
     "highest": 702
@@ -483,10 +499,6 @@
     "previous": "10h 56m",
     "highest": 696
   },
-  "nazanin": {
-    "previous": "10h 28m",
-    "highest": 695
-  },
   "YASMINA": {
     "previous": "8h 24m",
     "highest": 691
@@ -494,6 +506,10 @@
   "yasaman": {
     "previous": "10h 20m",
     "highest": 690
+  },
+  "Sanaz⭐️": {
+    "previous": "7h 9m",
+    "highest": 688
   },
   "MEL": {
     "previous": "11h 22m",
@@ -523,10 +539,6 @@
     "previous": "10h 6m",
     "highest": 672
   },
-  "moein": {
-    "previous": "9h 43m",
-    "highest": 670
-  },
   "saye": {
     "previous": "9h 4m",
     "highest": 669
@@ -541,6 +553,10 @@
   },
   "CA Intermediate G2": {
     "previous": "0h 0m",
+    "highest": 661
+  },
+  "سارا": {
+    "previous": "6h 3m",
     "highest": 661
   },
   "Mushfiqur": {
@@ -627,6 +643,10 @@
     "previous": "0h 0m",
     "highest": 621
   },
+  "Amir": {
+    "previous": "9h 37m",
+    "highest": 619
+  },
   "dr.kaqlisyom": {
     "previous": "9h 15m",
     "highest": 618
@@ -641,6 +661,10 @@
   },
   "farazjahani2323": {
     "previous": "1h 51m",
+    "highest": 611
+  },
+  "Zeezi": {
+    "previous": "6h 57m",
     "highest": 611
   },
   "zahra⚖️": {
@@ -662,6 +686,14 @@
   "nzn_mr": {
     "previous": "9h 21m",
     "highest": 605
+  },
+  "yekta": {
+    "previous": "8h 37m",
+    "highest": 602
+  },
+  "Parham": {
+    "previous": "9h 21m",
+    "highest": 602
   },
   "mhmddlshad": {
     "previous": "8h 45m",
@@ -695,10 +727,6 @@
     "previous": "9h 39m",
     "highest": 582
   },
-  "Amir": {
-    "previous": "7h 7m",
-    "highest": 577
-  },
   "Bahar": {
     "previous": "5h 1m",
     "highest": 571
@@ -727,10 +755,6 @@
     "previous": "9h 18m",
     "highest": 563
   },
-  "Parham": {
-    "previous": "7h 46m",
-    "highest": 561
-  },
   "zahra👩‍💻": {
     "previous": "0h 0m",
     "highest": 560
@@ -738,6 +762,10 @@
   "Maryam...": {
     "previous": "5h 52m",
     "highest": 557
+  },
+  "MANISH MKS": {
+    "previous": "7h 44m",
+    "highest": 556
   },
   "Mahyar": {
     "previous": "8h 14m",
@@ -770,6 +798,10 @@
   "marifaraj": {
     "previous": "0h 0m",
     "highest": 547
+  },
+  "zahra🌼": {
+    "previous": "8h 5m",
+    "highest": 545
   },
   "zari": {
     "previous": "0h 0m",
@@ -843,16 +875,8 @@
     "previous": "7h 30m",
     "highest": 518
   },
-  "yekta": {
-    "previous": "8h 23m",
-    "highest": 516
-  },
   "🦷HELIA🦷": {
     "previous": "7h 20m",
-    "highest": 515
-  },
-  "FAFA": {
-    "previous": "8h 25m",
     "highest": 515
   },
   "hana": {
@@ -915,6 +939,10 @@
     "previous": "5h 41m",
     "highest": 495
   },
+  "TheRosaMoon": {
+    "previous": "7h 59m",
+    "highest": 495
+  },
   "Leonn": {
     "previous": "0h 0m",
     "highest": 494
@@ -926,10 +954,6 @@
   "zahra87": {
     "previous": "0h 0m",
     "highest": 490
-  },
-  "zahra🌼": {
-    "previous": "7h 40m",
-    "highest": 485
   },
   "Mehrsa": {
     "previous": "5h 25m",
@@ -953,10 +977,6 @@
   },
   "Roghayeh": {
     "previous": "7h 41m",
-    "highest": 480
-  },
-  "f.nekochan": {
-    "previous": "0h 0m",
     "highest": 480
   },
   "ssawbrin": {
@@ -999,6 +1019,10 @@
     "previous": "7h 1m",
     "highest": 464
   },
+  "🦋Del🦋": {
+    "previous": "6h 32m",
+    "highest": 462
+  },
   "king of kings": {
     "previous": "6h 49m",
     "highest": 461
@@ -1037,6 +1061,10 @@
   },
   "Hiva": {
     "previous": "7h 13m",
+    "highest": 451
+  },
+  "ayal": {
+    "previous": "6h 24m",
     "highest": 451
   },
   "MARYAM-F": {
@@ -1087,6 +1115,10 @@
     "previous": "6h 49m",
     "highest": 437
   },
+  "دکتر افشار": {
+    "previous": "6h 45m",
+    "highest": 436
+  },
   "Fio": {
     "previous": "0h 0m",
     "highest": 435
@@ -1107,12 +1139,12 @@
     "previous": "0h 0m",
     "highest": 429
   },
-  "Sanaz⭐️": {
-    "previous": "4h 11m",
-    "highest": 429
-  },
   "gha": {
     "previous": "0h 0m",
+    "highest": 425
+  },
+  "tima": {
+    "previous": "4h 22m",
     "highest": 425
   },
   "azin": {
@@ -1131,6 +1163,10 @@
     "previous": "5h 50m",
     "highest": 420
   },
+  "sana": {
+    "previous": "4h 45m",
+    "highest": 420
+  },
   "inouri.f": {
     "previous": "0h 0m",
     "highest": 417
@@ -1145,6 +1181,10 @@
   },
   "maryamsathi": {
     "previous": "6h 15m",
+    "highest": 413
+  },
+  "liana": {
+    "previous": "0h 0m",
     "highest": 413
   },
   "shirin": {
@@ -1166,6 +1206,10 @@
   "n.paria": {
     "previous": "6h 8m",
     "highest": 408
+  },
+  "Golsa": {
+    "previous": "5h 12m",
+    "highest": 406
   },
   "Perla": {
     "previous": "5h 17m",
@@ -1195,13 +1239,13 @@
     "previous": "0h 0m",
     "highest": 396
   },
-  "MANISH MKS": {
-    "previous": "5h 52m",
-    "highest": 386
+  "FR": {
+    "previous": "6h 0m",
+    "highest": 390
   },
-  "ayal": {
-    "previous": "6h 16m",
-    "highest": 384
+  "Hila_Shadi": {
+    "previous": "0h 0m",
+    "highest": 389
   },
   "lotfi": {
     "previous": "4h 33m",
@@ -1231,6 +1275,10 @@
     "previous": "5h 50m",
     "highest": 375
   },
+  "🪽": {
+    "previous": "6h 14m",
+    "highest": 375
+  },
   "Earthquake": {
     "previous": "5h 33m",
     "highest": 368
@@ -1242,10 +1290,6 @@
   "Muahad": {
     "previous": "0h 0m",
     "highest": 367
-  },
-  "🦋Del🦋": {
-    "previous": "5h 49m",
-    "highest": 365
   },
   "Norman": {
     "previous": "4h 41m",
@@ -1263,6 +1307,14 @@
     "previous": "0h 0m",
     "highest": 361
   },
+  "Mira": {
+    "previous": "0h 0m",
+    "highest": 361
+  },
+  "anthony": {
+    "previous": "0h 0m",
+    "highest": 361
+  },
   "timaamiri": {
     "previous": "0h 0m",
     "highest": 360
@@ -1272,10 +1324,6 @@
     "highest": 360
   },
   "ati": {
-    "previous": "0h 0m",
-    "highest": 360
-  },
-  "FR": {
     "previous": "0h 0m",
     "highest": 360
   },
@@ -1295,11 +1343,19 @@
     "previous": "4h 18m",
     "highest": 354
   },
+  "ZEYNAB": {
+    "previous": "5h 8m",
+    "highest": 351
+  },
   "kosar": {
     "previous": "0h 0m",
     "highest": 350
   },
   "طه": {
+    "previous": "0h 0m",
+    "highest": 350
+  },
+  "Arte": {
     "previous": "0h 0m",
     "highest": 350
   },
@@ -1331,8 +1387,16 @@
     "previous": "0h 0m",
     "highest": 332
   },
+  "psyso": {
+    "previous": "4h 17m",
+    "highest": 331
+  },
   "nastaran": {
     "previous": "4h 0m",
+    "highest": 330
+  },
+  "newsharahmaniyan": {
+    "previous": "0h 0m",
     "highest": 330
   },
   "Asma": {
@@ -1354,6 +1418,10 @@
   "Saleh": {
     "previous": "0h 0m",
     "highest": 325
+  },
+  "fatemezeynol": {
+    "previous": "4h 55m",
+    "highest": 324
   },
   "Atefeh": {
     "previous": "4h 51m",
@@ -1379,10 +1447,6 @@
     "previous": "0h 0m",
     "highest": 312
   },
-  "Golsa": {
-    "previous": "0h 0m",
-    "highest": 312
-  },
   "douae": {
     "previous": "2h 0m",
     "highest": 309
@@ -1390,10 +1454,6 @@
   "sarah": {
     "previous": "4h 17m",
     "highest": 309
-  },
-  "ZEYNAB": {
-    "previous": "4h 39m",
-    "highest": 308
   },
   "reyan": {
     "previous": "3h 32m",
@@ -1439,6 +1499,10 @@
     "previous": "0h 0m",
     "highest": 295
   },
+  "psya": {
+    "previous": "4h 39m",
+    "highest": 293
+  },
   "Sahar": {
     "previous": "4h 11m",
     "highest": 292
@@ -1475,10 +1539,6 @@
     "previous": "4h 5m",
     "highest": 285
   },
-  "sana": {
-    "previous": "0h 0m",
-    "highest": 285
-  },
   "nilo📚": {
     "previous": "0h 0m",
     "highest": 284
@@ -1494,6 +1554,22 @@
   "originalerfan": {
     "previous": "0h 0m",
     "highest": 281
+  },
+  "Razberry": {
+    "previous": "0h 0m",
+    "highest": 281
+  },
+  "mtn": {
+    "previous": "0h 0m",
+    "highest": 274
+  },
+  "adl": {
+    "previous": "4h 28m",
+    "highest": 274
+  },
+  "nacmnoorhasan": {
+    "previous": "0h 0m",
+    "highest": 274
   },
   "Remy": {
     "previous": "0h 0m",
@@ -1515,9 +1591,9 @@
     "previous": "0h 0m",
     "highest": 269
   },
-  "adl": {
+  "Nafise": {
     "previous": "0h 0m",
-    "highest": 268
+    "highest": 267
   },
   "boun't": {
     "previous": "0h 0m",
@@ -1530,10 +1606,6 @@
   "parisaa": {
     "previous": "0h 0m",
     "highest": 259
-  },
-  "psyso": {
-    "previous": "0h 0m",
-    "highest": 257
   },
   "nilo": {
     "previous": "0h 0m",
@@ -1583,6 +1655,10 @@
     "previous": "0h 0m",
     "highest": 240
   },
+  "mohadese": {
+    "previous": "1h 25m",
+    "highest": 240
+  },
   "Aref Keshavarz": {
     "previous": "1h 8m",
     "highest": 187
@@ -1602,10 +1678,6 @@
   "utkirhakimov007": {
     "previous": "0h 0m",
     "highest": 100
-  },
-  "mohadese": {
-    "previous": "0h 0m",
-    "highest": 85
   },
   "my trying": {
     "previous": "0h 0m",

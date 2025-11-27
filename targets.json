@@ -1,39 +1,21 @@
 {
-  "Rira": {
-    "target": "11h"
-  },
   "Arma": {
     "target": "6h"
-  },
-  "saye": {
-    "target": "4h"
   },
   "nil": {
     "target": "4h"
   },
-  "yosanoriko": {
-    "target": "12h"
-  },
   "Mobina": {
-    "target": "8h"
-  },
-  "Shadi": {
-    "target": "4h"
+    "target": "10h"
   },
   "f.a.e.z.e.97": {
-    "target": "9h"
-  },
-  "MEL": {
-    "target": "5h 30m"
+    "target": "10h"
   },
   "yekta": {
-    "target": "6h 30m"
+    "target": "6h"
   },
   "MahiSiah": {
     "target": "8h"
-  },
-  "Parham": {
-    "target": "6h"
   },
   "tavallaei": {
     "target": "8h"
@@ -44,25 +26,46 @@
   "negin": {
     "target": "9h"
   },
-  "🦷nazanin": {
-    "target": "9h"
-  },
-  "<Majid/>": {
-    "target": "9h"
-  },
   "nzn_mr": {
-    "target": "8h"
+    "target": "9h"
   },
-  "Niloofar": {
-    "target": "4h 30m"
+  "MANISH MKS": {
+    "target": "5h"
   },
-  "زهرا": {
-    "target": "12h"
+  "Durga": {
+    "target": "7h"
   },
-  "Mushfiqur": {
+  "Azadeh": {
+    "target": "5h"
+  },
+  "mushroom": {
     "target": "6h"
   },
+  "Shadi": {
+    "target": "4h"
+  },
+  "nazanin": {
+    "target": "9h"
+  },
+  "سارا": {
+    "target": "9h"
+  },
+  "yosanoriko": {
+    "target": "12h"
+  },
+  "MEL": {
+    "target": "6h"
+  },
+  "newsharahmaniyan": {
+    "target": "6h"
+  },
+  "fatemeh": {
+    "target": "9h"
+  },
+  "saye": {
+    "target": "5h"
+  },
   "FAFA": {
-    "target": "7h"
+    "target": "9h"
   }
 }

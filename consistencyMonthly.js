@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 
 // TODO: change time challenge
 const TOTAL_DAYS = 28; //14;
-const MIN_DAYS = 21;
+const MIN_DAYS = 7;
 const GOLDEN_DAYS = 28; //14;
 const SILVER_DAYS = 26; //11;
 const BRONZE_DAYS = 21; //8;
